@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Signup Page</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="./css/signuppage.css" />
+    <!-- <link rel="stylesheet" href="signuppage.css"> -->
+  </head>
+  <body>
+    <div class="bg-img">
+      <div class="header">
+        <h1>SIGNUP PAGE</h1>
+      </div>
+      <div class="container">
+        <form action="signup.html" method="post">
+          <fieldset>
+            <legend class="contact">Contact Information</legend>
+            <div class="row">
+              <label for="name">Username:</label>
+              <div class="tf">
+                <input
+                  style="width: auto"
+                  type="text"
+                  id="name"
+                  name="user_name"
+                  placeholder="Required"
+                  required
+                /><br />
+              </div>
+            </div>
+            <div class="row">
+              <label for="email">Email Address:</label>
+              <div class="tf">
+                <input
+                  type="email"
+                  id="email"
+                  name="user_mail"
+                  placeholder="Required"
+                  required
+                /><br />
+              </div>
+            </div>
+            <div class="row">
+              <label for="number">Contact Info:</label>
+              <div class="tf">
+                <input
+                  type="tel"
+                  id="number"
+                  name="user_number"
+                  placeholder="Required"
+                  required
+                /><br />
+              </div>
+            </div>
+            <div class="row">
+              <label for="address">Password:</label>
+              <div class="tf">
+                <input
+                  type="password"
+                  id="address"
+                  name="user_password"
+                  placeholder="Required"
+                  required
+                /><br />
+              </div>
+            </div>
+            <div class="row">
+              <label for="city">Birthdate:</label>
+              <div class="tf">
+                <input
+                  type="date"
+                  id="city"
+                  name="user_birthdate"
+                  placeholder="Required"
+                  required
+                /><br />
+              </div>
+            </div>
+            <button type="submit">Sign Up</button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

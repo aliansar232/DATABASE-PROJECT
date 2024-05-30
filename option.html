@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login/Signup Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="option.css">
+</head>
+<body>
+    <div class="bg-img">
+        <div class="container">
+            <h1>Khaadi </h1>
+            <p>Do you want to login or sign up?</p>
+            <form action="" method="post">
+                <div class="radio-group">
+                    <input type="radio" id="login" name="action" value="login">
+                    <label for="login">Login</label>
+                    <input type="radio" id="signup" name="action" value="signup">
+                    <label for="signup">Sign up</label>
+                </div>
+                <button type="submit">Next</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const action = document.querySelector('input[name="action"]:checked').value;
+            if (action === 'login') {
+                window.location.href = 'loginpage.html';
+            } else if (action === 'signup') {
+                window.location.href = 'signuppage.html';
+            }
+        });
+    </script>
+</body>
+</html>

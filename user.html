@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Info Form and Add to Cart</title>
+    <style>
+      /* Add some basic styling to make the form look decent */
+      form {
+        width: 50%;
+        margin: 40px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+      }
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #3e8e41;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>User Info Form and Add to Cart</h1>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" /><br /><br />
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" /><br /><br />
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" /><br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+    <form
+      target="paypal"
+      action="https://www.paypal.com/cgi-bin/webscr"
+      method="post"
+    >
+      <!-- Identify your business so that you can collect the payments. -->
+      <input type="hidden" name="business" value="kin@kinskards.com" />
+      <!-- Specify a PayPal shopping cart View Cart button. -->
+      <input type="hidden" name="cmd" value="_cart" />
+      <input type="hidden" name="display" value="1" />
+      <!-- Continue shopping on the current webpage of the merchant site. -->
+      <input
+        type="hidden"
+        name="shopping_url"
+        value="https://example.com/birthday_cards"
+      />
+      <!-- Display the View Cart button. -->
+      <input
+        type="image"
+        name="submit"
+        src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif"
+        alt="Add to Cart"
+      />
+      <img
+        alt=""
+        width="1"
+        height="1"
+        src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif"
+      />
+      <!-- <img alt="" width="1" height="1"
+            src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" > -->
+    </form>
+  </body>
+</html>
